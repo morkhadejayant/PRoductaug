@@ -27,8 +27,10 @@ public class ProductController {
 	@PostMapping(value="/saveProduct")
 	public String saveProduct(@RequestBody Product product) {
 		boolean flag=service.saveProduct(product);
+    System.out.println("we are in controller");
 		if(flag) {
 			return "product saved";
+
 		}else {
 			return "product not saved";
 		}
